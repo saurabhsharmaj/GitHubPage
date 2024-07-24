@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://saurabhsharmaj.github.io/GitHubPage/</loc>
+         <lastmod>2024-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://saurabhsharmaj.github.io/GitHubPage/core-Java/</loc>
+         <lastmod>2024-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://saurabhsharmaj.github.io/GitHubPage/linux/</loc>
+         <lastmod>2024-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://saurabhsharmaj.github.io/GitHubPage/orm/</loc>
+         <lastmod>2024-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://saurabhsharmaj.github.io/GitHubPage/spring-boot/</loc>
+         <lastmod>2024-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
