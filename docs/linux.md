@@ -1,5 +1,5 @@
-# Page 3
+# Linux
 
-## Another heading page 3
+## Linux
 
 Some more example text

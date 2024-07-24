@@ -1,5 +1,5 @@
-# Page 2
+# Core java
 
-## Another heading page2
+## Core Java
 
 Some more example text

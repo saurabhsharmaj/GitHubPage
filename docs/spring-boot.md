@@ -1,5 +1,5 @@
-# Page 3
+# Spring Boot
 
-## Another heading page 3
+## Spring Boot
 
 Some more example text
