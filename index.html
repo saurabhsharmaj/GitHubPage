@@ -1,25 +1,651 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Help Documentation</title>
-</head>
-<body>
-    <h1>Welcome to the Help Documentation</h1>
-    <p>This documentation will guide you through the process.</p>
-    <h2>Section 1: Getting Started</h2>
-    <p>Start by following the steps below:</p>
-    <ol>
-        <li>Step 1: Open the application.</li>
-        <li>Step 2: Click on the help menu.</li>
-        <li>Step 3: Select the topic you need help with.</li>
-    </ol>
-    <h2>Section 2: Troubleshooting</h2>
-    <p>If you encounter any issues, try the following:</p>
-    <ul>
-        <li>Check your internet connection.</li>
-        <li>Restart the application.</li>
-        <li>Contact support for further assistance.</li>
-    </ul>
-    <footer>Contact us for more help.</footer>
-</body>
+	<head>
+		<title>Linux command</title>
+	</head>
+	<body>
+		<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+			<div class="markdown prose w-full break-words dark:prose-invert light">
+				<p>Here are answers to your interview questions on Linux commands:</p>
+				<ol>
+					<li>
+						<p>
+							<strong>How to login on remote Linux machine?</strong>
+						</p>
+						<ul>
+							<li>Use the <code>ssh</code> command:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">ssh username@remote_host
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to switch user?</strong>
+						</p>
+						<ul>
+							<li>Use the <code>su</code> command:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">su - username
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>Or use <code>sudo</code> to run a command as another user:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">sudo -u username <span class="hljs-built_in">command</span>
+											</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to search if a process is running (like Tomcat)?</strong>
+						</p>
+						<ul>
+							<li>Use the <code>ps</code> command along with <code>grep</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">ps aux | grep tomcat
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to check the PID of any process?</strong>
+						</p>
+						<ul>
+							<li>Use the <code>pidof</code> command:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">pidof process_name
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>Or use <code>ps</code> combined with <code>grep</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">ps aux | grep process_name
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to kill the Process?</strong>
+						</p>
+						<ul>
+							<li>Use the <code>kill</code> command with <code>-9</code> option:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">
+												<span class="hljs-built_in">kill</span> -9 PID
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to change or check ownership of any file (chown)?</strong>
+						</p>
+						<ul>
+							<li>To check ownership:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">
+												<span class="hljs-built_in">ls</span> -l filename
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>To change ownership:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">sudo <span class="hljs-built_in">chown</span> user:group filename
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to set permissions on any file/folder (chmod)?</strong>
+						</p>
+						<ul>
+							<li>To change permissions:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">
+												<span class="hljs-built_in">chmod</span> 755 filename
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to check the logs?</strong>
+						</p>
+						<ul>
+							<li>Use commands like <code>tail</code>, <code>cat</code>, or <code>less</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">
+												<span class="hljs-built_in">tail</span> -f /var/log/syslog
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>What is the use of the <code>less</code> command?</strong>
+						</p>
+						<ul>
+							<li>
+								<code>less</code> is used to view the contents of a file one screen at a time:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">less filename
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to create a service in Linux and start/stop/restart it?</strong>
+						</p>
+						<ul>
+							<li>To create a service, you usually define a systemd unit file in <code>/etc/systemd/system/</code>.</li>
+							<li>To start a service:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">sudo systemctl start service_name
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>To stop a service:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">sudo systemctl stop service_name
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>To restart a service:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">sudo systemctl restart service_name
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to search a keyword in a file?</strong>
+						</p>
+						<ul>
+							<li>Use the <code>grep</code> command:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">grep keyword filename
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>How to check if a file is available in the system?</strong>
+						</p>
+						<ul>
+							<li>Use the <code>find</code> command:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">find /path/to/search -name filename
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>Or use <code>locate</code> if the <code>mlocate</code> database is updated:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">locate filename
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>Networking connectivity commands:</strong>
+						</p>
+						<ul>
+							<li>
+								<code>nc</code> (netcat):<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">nc -zv hostname port
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>
+								<code>ping</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">ping hostname
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>
+								<code>telnet</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">telnet hostname port
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>
+								<code>lsof</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">lsof -i
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>
+								<code>nslookup</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">nslookup hostname
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>Firewall check command:</strong>
+						</p>
+						<ul>
+							<li>Use <code>ufw</code> for Uncomplicated Firewall:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">sudo ufw status
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>Or use <code>iptables</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">sudo iptables -L
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>Check the OS version:</strong>
+						</p>
+						<ul>
+							<li>Use the <code>lsb_release</code> command:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">lsb_release -a
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>Or check the contents of <code>/etc/os-release</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">
+												<span class="hljs-built_in">cat</span> /etc/os-release
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>OS troubleshooting commands:</strong>
+						</p>
+						<ul>
+							<li>
+								<code>top</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">top
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>
+								<code>du</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">
+												<span class="hljs-built_in">du</span> -sh /path/to/directory
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>
+								<code>df</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">
+												<span class="hljs-built_in">df</span> -h
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>
+								<code>free</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">free -h
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>Crontab or job scheduling:</strong>
+						</p>
+						<ul>
+							<li>To edit the crontab:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">crontab -e
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>To list current cron jobs:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">crontab -l
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<strong>Network packet analysis and tracing:</strong>
+						</p>
+						<ul>
+							<li>
+								<code>tcpdump</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">sudo tcpdump -i interface
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>
+								<code>traceroute</code>:<pre>
+									<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+										<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+											<span>bash</span>
+											
+										</div>
+										<div class="overflow-y-auto p-4"
+										     dir="ltr">
+											<code class="!whitespace-pre hljs language-bash">traceroute hostname
+</code>
+										</div>
+									</div>
+								</pre>
+							</li>
+						</ul>
+					</li>
+				</ol>
+			</div>
+		</div>
+	</body>
 </html>
